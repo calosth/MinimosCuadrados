@@ -56,7 +56,15 @@ function minimosCuadrados(x , y)
                 end
                 [a,b] = AyB(vecx,vecy);
                 c = exp(b);
-                func = sprintf('%.4f^(%.4fx)')
+                func = sprintf('e^(%.4f x)', a);
+            case 5
+                for i=1:length(vexc)
+                    vecx(i) = log(vecx(i))
+                end
+                [a,b] = AyB(vecx,vecy);
+                func = sprintf('%.4fLn(x) + %.4f',a,b);
+                
+            
                 
             
              case 7
