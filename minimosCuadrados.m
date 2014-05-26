@@ -23,14 +23,9 @@ function minimosCuadrados(x , y)
     
         switch method
 
-            case 1
+            
 
-                %En caso de que la funcion sea lineal
-
-                [a,b] = AyB(vecx,vecy);
-                func = sprintf('%.4f*x + (%.4f)',a,b);
-
-            case 2
+            case 3
                 %En caso de que la funcion sea Potencial
                 for i=1:length(vecx)
                     vecx(i) = log(vecx(i));
@@ -46,7 +41,13 @@ function minimosCuadrados(x , y)
                     vecx(i) = exp(vecx(i));
                     vecy(i) = exp(vecy(i));        
                 end
+            
+             case 7
 
+                %En caso de que la funcion sea lineal
+
+                [a,b] = AyB(vecx,vecy);
+                func = sprintf('%.4f*x + (%.4f)',a,b);
 
         end
 
