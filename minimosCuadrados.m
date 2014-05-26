@@ -23,6 +23,15 @@ function minimosCuadrados(x , y)
     
         switch method
 
+            case 1
+                
+                for i=1:length(vecx)
+                    vecx(i) = 1 / (vecx(i));
+                end
+                
+                [a,b] = AyB(vecx,vecy);
+                
+                func = sprintf('%.4f/x. + %.4f',a,b);
             
 
             case 3
