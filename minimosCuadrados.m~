@@ -23,7 +23,6 @@ function minimosCuadrados(x , y)
     
         switch method
 
-<<<<<<< HEAD
             case 1
                 
                 for i=1:length(vecx)
@@ -32,9 +31,18 @@ function minimosCuadrados(x , y)
                 
                 [a,b] = AyB(vecx,vecy);
                 
+                func = sprintf('%.4f/x. + %.4f',a,b);
+                
+            
+            case 2
+                
+                for i=1:length(vecx)
+                    vecx(i) = vecx(i) * vecy(i);
+                end
+                
+                [a,b] = AyB(vecx,vecy);
+                
                 func = 
-=======
->>>>>>> 49e1e0d0f11132dc01e1f5e30749c6ef1f5edf0a
             
 
             case 3
@@ -53,21 +61,21 @@ function minimosCuadrados(x , y)
                     vecx(i) = exp(vecx(i));
                     vecy(i) = exp(vecy(i));        
                 end
+                
             case 4 
                 for i=1:length(vecx)
                     vecy(i) = log(vecy(i));
                 end
                 [a,b] = AyB(vecx,vecy);
                 c = exp(b);
-<<<<<<< HEAD
-                func = sprintf('%.4f^(%.4fx)')
-=======
                 func = sprintf('e^(%.4f x)', a);
+                
             case 5
                 for i=1:length(vecx)
                     vecx(i) = log(vecx(i))
                 end
                 [a,b] = AyB(vecx,vecy);
+<<<<<<< HEAD
 <<<<<<< HEAD
                 func = sprintf('%.4fLn(x) + %.4f',a,b);
                 
@@ -82,6 +90,9 @@ function minimosCuadrados(x , y)
 >>>>>>> 49e1e0d0f11132dc01e1f5e30749c6ef1f5edf0a
 >>>>>>> d75590471a6d6c3afb563fb9c11df3dda97ad2d8
                 
+=======
+                func = sprintf('%.4fLn(x) + %.4f',a,b);   
+>>>>>>> 2c43861d21ad598cafc72813ff0fab8692dba275
             
              case 7
 
