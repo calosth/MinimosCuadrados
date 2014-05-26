@@ -82,7 +82,7 @@ function minimosCuadrados(x , y)
                      vecy(i) = - sqrt(vecy(i));
                  end
                  [a,b] = AyB(vecx,vecy);
-                 func = sprintf('(%.4fx + %.4f) ^ -2');
+                 func = sprintf('(%.4fx + %.4f) ^ -2',a,b);
                 
             
              case 7
