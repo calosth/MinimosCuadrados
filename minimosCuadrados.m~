@@ -31,7 +31,7 @@ function minimosCuadrados(x , y)
                 
                 [a,b] = AyB(vecx,vecy);
                 
-                func = sprintf('%.4f/x. + %.4f',a,b);
+                func = 
             
 
             case 3
