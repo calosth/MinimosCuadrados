@@ -24,13 +24,28 @@ function minimosCuadrados(x , y)
         switch method
 
             case 1
-
-                %En caso de que la funcion sea lineal
-
+                
+                for i=1:length(vecx)
+                    vecx(i) = 1 / (vecx(i));
+                end
+                
                 [a,b] = AyB(vecx,vecy);
-                func = sprintf('%.4f*x + (%.4f)',a,b);
+                
+                func = sprintf('%.4f/x. + %.4f',a,b);
+                
+            
+%            case 2
+%                 
+%                 for i=1:length(vecx)
+%                     vecx(i) = vecx(i) * vecy(i);
+%                 end
+%                 
+%                 [a,b] = AyB(vecx,vecy);
+%                 
+%                 func =
+            
 
-            case 2
+            case 3
                 %En caso de que la funcion sea Potencial
                 for i=1:length(vecx)
                     vecx(i) = log(vecx(i));
@@ -46,7 +61,37 @@ function minimosCuadrados(x , y)
                     vecx(i) = exp(vecx(i));
                     vecy(i) = exp(vecy(i));        
                 end
+                
+            case 4 
+                for i=1:length(vecx)
+                    vecy(i) = log(vecy(i));
+                end
+                [a,b] = AyB(vecx,vecy);
+                c = exp(b);
+                func = sprintf('e^(%.4f x)', a);
+                
+            case 5
+                for i=1:length(vexc)
+                    vecx(i) = log(vecx(i))
+                end
+                [a,b] = AyB(vecx,vecy);
+                func = sprintf('%.4fLn(x) + %.4f',a,b); 
+                 
+             case 6
+                 for i=1;length(vecx)
+                     vecy(i) = - sqrt(vecy(i));
+                 end
+                 [a,b] = AyB(vecx,vecy);
+                 func = sprintf('(%.4fx + %.4f) ^ -2',a,b);
+                
+            
+             case 7
 
+                %En caso de que la funcion sea lineal
+
+                [a,b] = AyB(vecx,vecy);
+                func = sprintf('%.4f*x + (%.4f)',a,b);
+            
 
         end
 
