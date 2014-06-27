@@ -31,7 +31,11 @@ function minimosCuadrados(vecx , vecy, method)
                 
                 [a,b] = AyB(vecx,vecy);
                 
-                func = sprintf('%.4f/x. + %.4f',a,b);
+                func = sprintf('%.4f/x + %.4f',a,b);
+                
+                for i=1:length(vecx)
+                    vecx(i) = 1 / (vecx(i));
+                end
                 
             
             case 2
@@ -49,6 +53,7 @@ function minimosCuadrados(vecx , vecy, method)
                  func = sprintf('%.4f / x + %.4f',d,c);                                          
 
             case 3
+                
                 %En caso de que la funcion sea Potencial
                 for i=1:length(vecx)
                     vecx(i) = log(vecx(i));
@@ -71,7 +76,7 @@ function minimosCuadrados(vecx , vecy, method)
                 end
                 [a,b] = AyB(vecx,vecy);
                 c = exp(b);
-                func = sprintf('e^(%.4f x)', a);
+                func = sprintf('e^(%.4f*x)', a);
                 
             case 5
                 for i=1:length(vexc)
@@ -85,7 +90,7 @@ function minimosCuadrados(vecx , vecy, method)
                      vecy(i) = - sqrt(vecy(i));
                  end
                  [a,b] = AyB(vecx,vecy);
-                 func = sprintf('(%.4fx + %.4f) ^ -2',a,b);
+                 func = sprintf('(%.4f*x + %.4f) ^ -2',a,b);
                 
             
              case 7
@@ -109,7 +114,7 @@ function minimosCuadrados(vecx , vecy, method)
 
         plot(vecx,vecy,'.');
 
-        legend(func,'puntos'); pause; close;
+        legend(func,'puntos');
 
         hold off; 
     
