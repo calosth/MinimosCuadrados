@@ -5,9 +5,6 @@ function minimosCuadrados(vecx , vecy, method)
     
     % Se ingresan los valores de x separados por comas y distintos entre sí
     % Se ingresan los valores de y separados por comas
-    % Se ingresa un valor numérico que haga referencia al tipo de ajuste:
-    % 1: lineal
-    % 2: potencial
     
 
     if length(vecx) == length(vecy)
@@ -22,7 +19,7 @@ function minimosCuadrados(vecx , vecy, method)
                 
                 [a,b] = AyB(vecx,vecy);
                 
-                func = sprintf('%.4f/x. + %.4f',a,b);
+                func = sprintf('%.4f/x + %.4f',a,b);
                 
             
             case 2
@@ -98,7 +95,7 @@ function minimosCuadrados(vecx , vecy, method)
 
         plot(vecx,fx,'b'), hold on;
 
-%         plot(vecx,vecy,'.');
+        plot(vecx,vecy,'.');
 
         legend(func,'puntos'); pause; close;
 
