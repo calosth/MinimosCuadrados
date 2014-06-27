@@ -1,4 +1,4 @@
-function minimosCuadrados(x , y)
+function minimosCuadrados(vecx , vecy, method)
     
     % Programa que calcula la ecuacion de la recta mediante mínimos
     % cuadrados
@@ -8,8 +8,8 @@ function minimosCuadrados(x , y)
     
 %     vecx = str2num( input('x=','s') );
 %     vecy = str2num( input('y=','s') );
-     vecx = str2num( x );
-     vecy = str2num( y ); 
+     %vecx = str2num( x );
+     %vecy = str2num( y ); 
 %      method = str2num( method );
     % Se ingresa un valor numérico que haga referencia al tipo de ajuste:
     % 1: lineal
@@ -17,7 +17,7 @@ function minimosCuadrados(x , y)
     
 %     method = str2num( input('metodo: ','s') );
     
-    method = 1;
+%    method = 1;
 
     if length(vecx) == length(vecy)
     
@@ -32,6 +32,10 @@ function minimosCuadrados(x , y)
                 [a,b] = AyB(vecx,vecy);
                 
                 func = sprintf('%.4f/x. + %.4f',a,b);
+                
+                for i=1:length(vecx)
+                    vecx(i) = 1 / (vecx(i));
+                end
                 
             
             case 2
@@ -101,7 +105,7 @@ function minimosCuadrados(x , y)
         for i=1:length(vecx)
 
             x = vecx(i);
-            fx(i) = eval(func);
+             = eval(func);
 
         end
 
@@ -109,7 +113,7 @@ function minimosCuadrados(x , y)
 
         plot(vecx,vecy,'.');
 
-        legend(func,'puntos'); pause; close;
+        %legend(func,'puntos'); pause; close;
 
         hold off; 
     
