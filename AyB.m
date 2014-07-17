@@ -14,7 +14,11 @@ function [a,b] = AyB(vecx,vecy)
     
     SumxPWR2 = Sumx.^2;
     
-    a = ( nSumxy - ( Sumx*Sumy ) )/( nSumPWR2 - SumxPWR2 )
+    a = ( nSumxy - ( Sumx*Sumy ) )/( nSumPWR2 - SumxPWR2 );
     
     
-    b = ( ( SumPWR2 * Sumy ) - ( Sumxy * Sumx ) ) /( nSumPWR2 - SumxPWR2 )
+    b = ( ( SumPWR2 * Sumy ) - ( Sumxy * Sumx ) ) /( nSumPWR2 - SumxPWR2 );
+    
+
+
+    
