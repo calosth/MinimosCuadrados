@@ -16,9 +16,13 @@ function [a,b] = AyB(vecx,vecy)
     
     a = ( nSumxy - ( Sumx*Sumy ) )/( nSumPWR2 - SumxPWR2 );
     
+<<<<<<< HEAD
     
     b = ( ( SumPWR2 * Sumy ) - ( Sumxy * Sumx ) ) /( nSumPWR2 - SumxPWR2 );
     
 
 
     
+=======
+    b = ( ( SumPWR2 * Sumy ) - ( Sumxy * Sumx ) ) /( nSumPWR2 - SumxPWR2 );
+>>>>>>> FETCH_HEAD
